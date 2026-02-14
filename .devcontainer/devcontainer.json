@@ -25,12 +25,14 @@
         "code-runner.runInTerminal": true,
         "code-runner.executorMap": {
           "javascript": "node",
-          "python": "python3"
+          "python": "python3",
+          "sql": "mysql -u root workbook -vvv < $fullFileName"
         },
         "python.defaultInterpreterPath": "/usr/local/bin/python3"
       }
     }
   },
-  "postCreateCommand": "sudo ln -s /usr/bin/pip3 /usr/bin/pip || true && pip install --upgrade pip",
+  "postCreateCommand": "sudo ln -s /usr/bin/pip3 /usr/bin/pip || true && pip install --upgrade pip && sudo apt-get update && sudo apt-get install -y mariadb-server",
+  "postAttachCommand": "sudo service mariadb start",
   "remoteUser": "vscode"
 }
