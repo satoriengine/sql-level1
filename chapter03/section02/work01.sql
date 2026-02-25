@@ -1,0 +1,6 @@
+INSERT INTO
+  quest
+  
+VALUES
+  
+;
