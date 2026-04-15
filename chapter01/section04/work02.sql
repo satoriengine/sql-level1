@@ -5,5 +5,5 @@ SELECT
 FROM
     
 WHERE
-    publish  ('日経BP', '翔泳社')
+    publish  ('技術の泉', '未来書房')
 ;
